@@ -260,31 +260,6 @@ public static void pairwithminimumsum(int arr[]) {
      System.out.println(first + " " + second);
  }
 
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   public static  boolean isPrime(int num){
