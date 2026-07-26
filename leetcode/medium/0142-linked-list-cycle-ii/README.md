@@ -54,9 +54,9 @@ Explanation: There is no cycle in the linked list.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 6 ms (beats 10.24%)  
+**Runtime:** 0 ms (beats 100.00%)  
 **Memory:** 46.7 MB (beats 50.13%)  
-**Submitted:** 2026-07-26T12:08:06.828Z  
+**Submitted:** 2026-07-26T12:14:18.500Z  
 
 ```java
 /**
@@ -72,16 +72,20 @@ Explanation: There is no cycle in the linked list.
  */
 public class Solution {
     public ListNode detectCycle(ListNode head) {
-        LinkedHashMap<ListNode,Integer> map = new LinkedHashMap<>();
-        ListNode temp = head;
-
-        while(temp != null){
-            if(map.containsKey(temp)){
-              return temp;
-            }else{
-                map.put(temp,1);
+        
+        ListNode slow = head;
+        ListNode fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(fast == slow){
+                slow =head;
+                while(slow != fast){
+                    slow = slow.next;
+                    fast = fast.next;
+                }
+                return slow;
             }
-            temp = temp.next;
         }
         return null;
     }
