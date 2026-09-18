@@ -55,8 +55,8 @@ Explanation: There is no cycle in the linked list.
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 47 MB (beats 15.88%)  
-**Submitted:** 2026-07-25T12:20:12.028Z  
+**Memory:** 46.9 MB (beats 33.71%)  
+**Submitted:** 2026-09-18T10:50:44.880Z  
 
 ```java
 /**
@@ -72,16 +72,16 @@ Explanation: There is no cycle in the linked list.
  */
 public class Solution {
     public boolean hasCycle(ListNode head) {
-        ListNode slow = head;
         ListNode fast = head;
+        ListNode slow = head;
         while(fast != null && fast.next != null){
-            slow = slow.next;
             fast = fast.next.next;
+            slow = slow.next;
             if(slow == fast){
                 return true;
             }
         }
-            return false;
+        return false;
     }
 }
 ```
