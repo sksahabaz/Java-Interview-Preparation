@@ -40,9 +40,9 @@ Explanation: 2 does not exist in nums so return -1
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.7 MB  
-**Submitted:** 2026-09-19T08:50:09.135Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 48.6 MB (beats 13.94%)  
+**Submitted:** 2026-09-19T08:51:01.747Z  
 
 ```java
 class Solution {
@@ -52,7 +52,7 @@ class Solution {
        int high = nums.length-1;
        while(low<=high){
        int mid = low+(high-low)/2;
-       if(nums[mid] == mid){
+       if(nums[mid] == target){
         return mid;
        }else if(nums[mid] < target){
         low = mid+1;
