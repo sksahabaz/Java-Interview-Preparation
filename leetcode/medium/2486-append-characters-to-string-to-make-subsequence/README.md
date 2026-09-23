@@ -53,9 +53,9 @@ It can be shown that appending any 4 characters to the end of s will never make 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 7 ms (beats 66.96%)  
-**Memory:** 47 MB (beats 54.29%)  
-**Submitted:** 2026-09-23T14:20:24.718Z  
+**Runtime:** 0 ms  
+**Memory:** 42.9 MB  
+**Submitted:** 2026-09-23T14:20:50.100Z  
 
 ```java
 class Solution {
