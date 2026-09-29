@@ -46,9 +46,9 @@ The maximum number of customers that can be satisfied = 1 + 1 + 1 + 1 + 7 + 5 = 
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-09-29T12:51:30.468Z  
+**Runtime:** 3 ms (beats 93.72%)  
+**Memory:** 48.5 MB (beats 87.47%)  
+**Submitted:** 2026-09-29T12:51:37.678Z  
 
 ```java
 class Solution {
