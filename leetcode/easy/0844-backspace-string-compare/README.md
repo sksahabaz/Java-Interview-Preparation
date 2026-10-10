@@ -51,9 +51,9 @@ Explanation: s becomes "c" while t becomes "b".
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.8 MB  
-**Submitted:** 2026-10-10T14:38:09.463Z  
+**Runtime:** 2 ms (beats 60.83%)  
+**Memory:** 43.5 MB (beats 15.07%)  
+**Submitted:** 2026-10-10T14:38:14.872Z  
 
 ```java
 class Solution {
