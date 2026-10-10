@@ -52,8 +52,8 @@ Explanation: s becomes "c" while t becomes "b".
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 43 MB  
-**Submitted:** 2026-10-10T14:37:09.844Z  
+**Memory:** 42.8 MB  
+**Submitted:** 2026-10-10T14:38:09.463Z  
 
 ```java
 class Solution {
@@ -64,8 +64,8 @@ class Solution {
 
   for(int i=0;i<s.length();i++){
     char ch = s.charAt(i);
-    if(ch == '#'){
-        a.pop();
+    if(ch == '#' ){
+     if (!a.isEmpty()) a.pop();
     }else{
         a.push(ch);
     }
@@ -75,7 +75,7 @@ class Solution {
 for(int i=0;i<t.length();i++){
     char ch = t.charAt(i);
     if(ch == '#'){
-        b.pop();
+ if (!b.isEmpty()) b.pop();
     }else{
         b.push(ch);
     }
