@@ -52,8 +52,8 @@ Output: -1
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-10-12T08:19:23.466Z  
+**Memory:** 42 MB  
+**Submitted:** 2026-10-12T08:25:45.543Z  
 
 ```java
 class Solution {
@@ -63,9 +63,9 @@ class Solution {
  int high = nums.length-1;
  while(low<=high){
     int mid = low+(high-low)/2;
-    if(mid == target){
-        return high;
-    }else if( mid > target && target < low){
+    if(nums[mid] == target){
+        return mid;
+    }else if( nums[mid] > target && target <nums[low]){
         low = mid+1;
     }else{
         high = mid -1;
