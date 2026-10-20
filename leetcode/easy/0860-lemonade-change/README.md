@@ -48,9 +48,9 @@ Since not every customer received the correct change, the answer is false.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.1 MB  
-**Submitted:** 2026-10-20T13:31:39.067Z  
+**Runtime:** 2 ms (beats 97.70%)  
+**Memory:** 72.1 MB (beats 92.77%)  
+**Submitted:** 2026-10-20T13:41:59.217Z  
 
 ```java
 class Solution {
@@ -60,18 +60,23 @@ class Solution {
     
    for(int i=0;i<bills.length;i++){
     if(bills[i] == 5){
-        five--;
-    }else if(bills[i] == 10 && five !=0){
+        five++;
+    }else if(bills[i] == 10){
+        if(five == 0){
+            return false;
+        }else{
         five--;
         ten++;
-    }else if(bills[i] == 20){
-             if( five == 0 && ten ==0){
-                return false;
-             }else{
-                ten--;
-                five--;
-                
-             }
+        }
+    }else {
+        if(ten >0 && five >0){
+            ten--;
+            five--;
+        }else if( five >= 3){
+            five-=3;
+        }else{
+            return false;
+        }
     }
    }
       return true;
