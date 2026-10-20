@@ -47,36 +47,29 @@ You need to output 2.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 15 ms (beats 59.66%)  
-**Memory:** 51.3 MB (beats 86.81%)  
-**Submitted:** 2026-09-28T14:18:33.396Z  
+**Runtime:** 15 ms (beats 59.94%)  
+**Memory:** 51.2 MB (beats 88.68%)  
+**Submitted:** 2026-10-20T13:02:43.455Z  
 
 ```java
 class Solution {
     public int findContentChildren(int[] g, int[] s) {
+         
+    int l=0,r=0;
 
-   Arrays.sort(g);
-   Arrays.sort(s);
-
-   int i = 0;
-   int j = 0;
-   int count = 0;
-   while(i<g.length && j<s.length){
-
-    if(s[j] >= g[i]){
-        count++;
-        i++;
-        j++;
-    }else{
-
-      j++;
-    }
-   }
-   return count;
-
+       Arrays.sort(g);
+       Arrays.sort(s);  
+      while(l<g.length && r<s.length){
+        if(s[r] >= g[l]){
+            l++;
+            r++;
+        }else{
+            r++;
+        }
+      }
+   return l;
 
     }
-
 }
 ```
 
