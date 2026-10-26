@@ -31,7 +31,7 @@ Explanation: We have: 1 occurring 1 time, and there are no other numbers between
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-26T17:35:49.440Z  
+**Submitted:** 2026-10-26T17:40:51.269Z  
 
 ```java
 class Solution {
@@ -52,9 +52,9 @@ class Solution {
         
         ArrayList<Integer> al = new ArrayList<>();
         
-        for( int value: map.values()){
-            al.add(value);
-        }
+       for (int i = 1; i <= n; i++) {
+           al.add(map.get(i));
+       }
         
         return al;
     }
