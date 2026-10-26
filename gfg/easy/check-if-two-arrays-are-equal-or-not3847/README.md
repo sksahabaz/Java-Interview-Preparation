@@ -28,7 +28,7 @@ Explanation: a[] and b[] have only one common value, 2. All others elements are 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-26T17:05:29.887Z  
+**Submitted:** 2026-10-26T17:15:00.425Z  
 
 ```java
 class Solution {
