@@ -16,9 +16,9 @@ class Solution {
         
         ArrayList<Integer> al = new ArrayList<>();
         
-        for( int value: map.values()){
-            al.add(value);
-        }
+       for (int i = 1; i <= n; i++) {
+           al.add(map.get(i));
+       }
         
         return al;
     }
