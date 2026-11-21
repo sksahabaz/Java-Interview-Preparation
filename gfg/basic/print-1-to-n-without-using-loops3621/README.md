@@ -28,7 +28,7 @@ Explanation: We have to print numbers from 1 to 10.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-10T14:04:01.600Z  
+**Submitted:** 2026-11-21T11:49:01.297Z  
 
 ```java
 class Solution {
