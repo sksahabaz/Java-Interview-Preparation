@@ -31,7 +31,7 @@ Explanation: The sequence is 0, 1, 1, 2, 3, 5... The 5th Fibonacci number is 5.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-10T14:33:08.513Z  
+**Submitted:** 2026-11-21T12:42:05.758Z  
 
 ```java
 class Solution {
@@ -40,7 +40,7 @@ class Solution {
       
         
       
-      // Base condition
+       // Base condition
             if (n <= 1) {
                 return n;
             }
