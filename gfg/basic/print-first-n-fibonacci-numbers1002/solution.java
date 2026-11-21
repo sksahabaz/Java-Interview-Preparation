@@ -1,23 +1,28 @@
 class Solution {
     public ArrayList<Integer> fibonacciNumbers(int n) {
     
-       ArrayList<Integer> al = new ArrayList<>();
-       
-       int a=0,b=1;
-       
-       for(int i=0;i<n;i++){
-         al.add(a);
-         
-         int c = a+b;
-         a=b;
-         b=c;
-         
-           
-           
-       }
+    //   step:1 base case
+    if(n==1){
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(0);
+        return list;
+    }
+    
+    if(n==2){
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(0);
+        list.add(1);
+        return list;
+    }
+    
+    ArrayList<Integer> list = fibonacciNumbers(n-1);
+    
+    int size = list.size();
+    
+    list.add(list.get(size-1) + list.get(size-2));
+    
+    return list;
     
     
-    return al;
-        
     }
 }
