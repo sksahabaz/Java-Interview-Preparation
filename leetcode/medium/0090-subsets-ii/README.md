@@ -38,54 +38,38 @@ Output: [[],[0]]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms (beats 99.71%)  
-**Memory:** 44.8 MB (beats 67.48%)  
-**Submitted:** 2026-11-14T13:07:41.059Z  
+**Runtime:** 2 ms (beats 99.72%)  
+**Memory:** 44.7 MB (beats 57.07%)  
+**Submitted:** 2026-11-23T15:53:55.918Z  
 
 ```java
-
-import java.util.*;
-
 class Solution {
     public List<List<Integer>> subsetsWithDup(int[] nums) {
-
-        List<List<Integer>> result = new ArrayList<>();
-
         Arrays.sort(nums);
-
-        backtrack(nums, 0, new ArrayList<>(), result);
-
+        List<List<Integer>> result = new ArrayList<>();
+        solve(0,nums,new ArrayList<>(),result);
         return result;
     }
 
-    private void backtrack(
-        int[] nums,
-        int start,
-        List<Integer> path,
-        List<List<Integer>> result
-    ) {
+    public static void solve(int i,int[] nums,List<Integer> current,List<List<Integer>> result){
 
-        result.add(new ArrayList<>(path));
+    if(i == nums.length){
+        result.add(new ArrayList<>(current));
+        return;
+    }
+    current.add(nums[i]);
+    solve(i+1,nums,current,result);
+    current.remove(current.size()-1);
 
-        for (int i = start; i < nums.length; i++) {
+    int j = i+1;
+    while(j<nums.length && nums[j] == nums[i]) j++;
+    
+        solve(j,nums,current,result);
 
-            // Skip duplicates at the same level
-            if (i > start && nums[i] == nums[i - 1]) {
-                continue;
-            }
 
-            // Choose
-            path.add(nums[i]);
 
-            // Explore
-            backtrack(nums, i + 1, path, result);
-
-            // Undo
-            path.remove(path.size() - 1);
-        }
     }
 }
-
 ```
 
 ---
